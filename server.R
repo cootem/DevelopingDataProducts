@@ -1,3 +1,4 @@
+library(shiny)
 library(UsingR)
 data(galton)
 
@@ -10,5 +11,8 @@ shinyServer(
       mse <- mean((galton$child - mu)^2)      
       text(63, 150, paste("mu = ", mu))      
       text(63, 140, paste("MSE = ", round(mse, 2)))      
-    })      }
+    })
+    output$summary <- renderText(
+"This is a histogram - a frequency plot\n
+Choose a mu value and see where it aligns in the histogram.")}
 )

@@ -1,5 +1,5 @@
 # DevelopingDataProducts
-Coursera - Data Science specialization - Developing Data Products
+Coursera - Data Science Specialization - Developing Data Products
 
 ## Course final project
 

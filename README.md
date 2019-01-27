@@ -1,7 +1,4 @@
-# DevelopingDataProducts
-Coursera - Data Science Specialization - Developing Data Products
-
-## Course final project
+# Course final project
 
 A Shiny application deployed on Rstudio's servers. 
 

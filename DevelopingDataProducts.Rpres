@@ -1,0 +1,29 @@
+Developing Data Products - Course Project
+========================================================
+author: Michael Coote
+date: 1/27/2019
+autosize: true
+
+Developing Data Products
+========================================================
+
+I have deployed a Shiny Application at 
+<https://cootem.shinyapps.io/DevelopingDataProducts/>.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```

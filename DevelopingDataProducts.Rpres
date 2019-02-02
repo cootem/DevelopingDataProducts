@@ -1,11 +1,11 @@
-Developing Data Products - Course Project
+Childs Height Predictor
 ========================================================
 author: Michael Coote
 date: 2/2/2019
 autosize: true
 font-family: 'Book Antiqua'
 
-Developing Data Products
+The Data Product
 ========================================================
 
 I have deployed a Shiny Application at 

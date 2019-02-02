@@ -8,3 +8,4 @@ See the application at [Developing Data Products](https://cootem.shinyapps.io/De
 
 There is also a pitch presentation, which can be found at [Data Product Pitch](DevelopingDataProducts.html)
 
+[Main page](https://cootem.github.io/DevelopingDataProducts/)

@@ -1,8 +1,9 @@
 Developing Data Products - Course Project
 ========================================================
 author: Michael Coote
-date: 1/27/2019
+date: 2/2/2019
 autosize: true
+font-family: 'Book Antiqua'
 
 Developing Data Products
 ========================================================
@@ -10,29 +11,43 @@ Developing Data Products
 I have deployed a Shiny Application at 
 <https://cootem.shinyapps.io/DevelopingDataProducts/>.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Prediction of a childs height based on the height of their parents
+- Uses the Galton dataset
+- Modelled using linear regression
 
-Slide With Code
+The Data Model
+========================================================
+A linear model fit to the sample dataset
+
+![plot of chunk unnamed-chunk-1](DevelopingDataProducts-figure/unnamed-chunk-1-1.png)
+
+Accuracy
+========================================================
+Linear Model Summary
+
+
+```
+lm(formula = child ~ parent, data = galton)
+```
+
+```
+              Estimate Std. Error   t value     Pr(>|t|)
+(Intercept) 23.9415302 2.81087834  8.517455 6.536845e-17
+parent       0.6462906 0.04113588 15.711115 1.732509e-49
+```
+
+The model loosly estimates the heights, 
+r squared = 0.2105
+
+Future Work
 ========================================================
 
+This should layout a clear path forward for further development on the
+child height predictor model.
 
-```r
-summary(cars)
-```
+Future work we hope you will fund
+- Broaden the sample dataset
+- Estimator for handling male and female heights
+- Automatic conversion to feet and inches, or other units
 
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-```
-
-Slide With Plot
-========================================================
-
-![plot of chunk unnamed-chunk-2](DevelopingDataProducts-figure/unnamed-chunk-2-1.png)
+Thank you

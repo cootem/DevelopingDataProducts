@@ -1,8 +1,9 @@
 Developing Data Products - Course Project
 ========================================================
 author: Michael Coote
-date: 1/27/2019
+date: 2/2/2019
 autosize: true
+font-family: 'Book Antiqua'
 
 Developing Data Products
 ========================================================
@@ -10,20 +11,44 @@ Developing Data Products
 I have deployed a Shiny Application at 
 <https://cootem.shinyapps.io/DevelopingDataProducts/>.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Prediction of a childs height based on the height of their parents
+- Uses the Galton dataset
+- Modelled using linear regression
 
-Slide With Code
+The Data Model
 ========================================================
+A linear model fit to the sample dataset
 
-```{r}
-summary(cars)
+```{r echo = FALSE}
+# setup
+library(UsingR)
+data(galton)
+fit <- lm(data = galton, child ~ parent)
+plot(galton$parent,galton$child,pch=19,col="blue")
+lines(galton$parent,fit$fitted,col="red",lwd=3)
 ```
 
-Slide With Plot
+Accuracy
 ========================================================
+Linear Model Summary
 
 ```{r, echo=FALSE}
-plot(cars)
+summary(fit)$call
+summary(fit)$coefficients
 ```
+
+The model loosly estimates the heights, 
+r squared = `r round(summary(fit)$r.squared, 4)`
+
+Future Work
+========================================================
+
+This should layout a clear path forward for further development on the
+child height predictor model.
+
+Future work we hope you will fund
+- Broaden the sample dataset
+- Estimator for handling male and female heights
+- Automatic conversion to feet and inches, or other units
+
+Thank you

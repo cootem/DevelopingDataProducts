@@ -17,15 +17,15 @@ shinyServer(
       text(65, 78, paste("parents height = ", pH), col = "blue")
       text(75, 62, paste("childs height = ", round(cH, 1)), col = "blue")   
     })
-    output$summary <- renderText(
-"This tool predicts childs heights based on the average height
-of their parents.
+    output$summary <- renderText((
+"This tool predicts childs heights based on the average height of their parents.
 
-Choose a value using the slider and the predicted childs height
-will be shown with the moving blue dot.
+This is an idea first presented by Francis Galton. His theory is that a childs height can be predicted by looking at the heights of the parents (using females heights scaled to 1.08). With the caveat that heights regress to the mean - tall parents have slightly less tall children and short parents have slightly taller children. The model uses his original dataset. 
 
-The samples used in the model are shown in gray.")
+Choose a value using the slider and the predicted childs height will be shown with the moving blue dot.
+
+The samples used in the model are shown in gray."))
     output$sampleData <- renderDataTable(
       galton,
-      options = list(pageLength = 100 ) )}
+      options = list(pageLength = 10 ) )}
 )

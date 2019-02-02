@@ -16,8 +16,15 @@ shinyUI(fluidPage(
   mainPanel(
     tabsetPanel(
       type = "tabs",
-      tabPanel("Plot", plotOutput("lmFit")),
-      tabPanel("Documentation", verbatimTextOutput("summary")),
+      tabPanel("Prediction", plotOutput("lmFit")),
+      tabPanel("Documentation", 
+               textOutput("summary"),
+               tags$style(type="text/css", 
+                          "#summary {
+                          white-space: pre-wrap; 
+                          width: 90%; 
+                          padding-left: 20px;
+                          padding-top: 20px; }")),
       tabPanel("Sample Data", dataTableOutput("sampleData"))
     )
   ))

@@ -17,7 +17,8 @@ shinyUI(fluidPage(
     tabsetPanel(
       type = "tabs",
       tabPanel("Plot", plotOutput("lmFit")),
-      tabPanel("Documentation", verbatimTextOutput("summary"))
+      tabPanel("Documentation", verbatimTextOutput("summary")),
+      tabPanel("Sample Data", dataTableOutput("sampleData"))
     )
   ))
 ))

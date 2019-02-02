@@ -24,6 +24,8 @@ of their parents.
 Choose a value using the slider and the predicted childs height
 will be shown with the moving blue dot.
 
-The samples used in the model are shown in gray.
-")}
+The samples used in the model are shown in gray.")
+    output$sampleData <- renderDataTable(
+      galton,
+      options = list(pageLength = 100 ) )}
 )
